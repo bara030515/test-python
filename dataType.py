@@ -62,10 +62,11 @@ var7 = """
 탕탕, 후루후루, 마라탕탕탕탕, 후루루루루
 """
 
+numTang = var7.find("마라",0)
+
 while True:
-    numTang = var7.find("마라",0)
-    numTang = var7.find("마라",numTang+1)
     print(numTang)
+    numTang = var7.find("마라",numTang+1)
     if numTang == -1:
         break
 
