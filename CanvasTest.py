@@ -24,7 +24,7 @@ root.bind('<Motion>',mouseMove)
 labelMouse = tkinter.Label(root, text=',', font=("맑은 고딕", 10))
 labelMouse.pack()
 
-labelRandom = tkinter.Label(root, text='??', font=('바탕', 100), bg = "#FFFFFF")
+labelRandom = tkinter.Label(root, text='??', font=('맑은 고딕', 100), bg = "#FFFFFF")
 labelRandom.place(x=384, y=67, width= 276, height= 143)
 
 btnLot = tkinter.Button(root, text='제비뽑기', font=('맑은 고딕', 40), fg = "skyblue", command=click_btnLot)
