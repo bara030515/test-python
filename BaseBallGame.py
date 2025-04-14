@@ -22,15 +22,41 @@ def click_btnCheck():
     #-------------------과제 영역 시작-----------------------#
     #정답인 경우 successGame를 참으로 지정
 
+    # 스트라이크와 볼의 초기값
     strike = 0
     ball = 0
-    if answer[0] == entryLec1:
-        strike =+ 1
-    elif
+
+    # if 사용자가 입력한 첫 번째 숫자가 임의의 숫자 첫 번째와 맞으면 스트라이크 +1
+    # elif 사용자가 입력한 첫 번째 숫자가 임의의 숫자 두 번째 혹은 세 번째와 맞으면 볼 +1
+    if answer[0] == entryLec1.get():
+        strike += 1
+    elif (answer[0] == entryLec2.get()) or (answer[0] == entryLec3.get()):
+        ball += 1
+
+    # if 사용자가 입력한 두 번째 숫자가 임의의 숫자 두 번째와 맞으면 스트라이크 +1
+    # elif 사용자가 입력한 두 번째 숫자가 임의의 숫자 첫 번째 혹은 세 번째와 맞으면 볼 +1
+    if answer[1] == entryLec2.get():
+        strike += 1
+    elif (answer[1] == entryLec1.get()) or (answer[1] == entryLec3.get()):
+        ball += 1
+
+    # if 사용자가 입력한 첫 번째 숫자가 임의의 숫자 첫 번째와 맞으면 스트라이크 +1
+    # elif 사용자가 입력한 첫 번째 숫자가 임의의 숫자 두 번째 혹은 세 번째와 맞으면 볼 +1
+    if answer[2] == entryLec3.get():
+        strike += 1
+    elif (answer[2] == entryLec1.get()) or (answer[2] == entryLec2.get()):
+        ball += 1
+    
+    # 3스트라이크가 되면 succesGame을 트루로 바꿔라 (과제 영역 아래 쪽에 트루면 성공 문구와 함께 프로그램 종료하는 코드 있음)
     if strike == 3:
         successGame = True
+
+    # 버튼에 스트라이크와 볼의 개수를 보여주는 코드
     output_str = str(strike)+"S"+" "+str(ball)+"B"
     btnCheck["text"] = (output_str)
+
+    # print (strike, ball) 함수 테스트
+
     #------------------- 과제 영역 끝 -----------------------#
 
     # Game End (9번의 기회를 모두 사용한 경우)
@@ -85,3 +111,4 @@ while (answer[0] == answer[1]) or (answer[1] == answer[2]) or (answer[0] == answ
 nextGame()
 
 root.mainloop()
+
