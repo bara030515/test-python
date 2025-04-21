@@ -112,3 +112,5 @@ nextGame()
 
 root.mainloop()
 
+#tkinter문제 2개, 이론 짧음 거의 실습 문제
+#결과 + 의도를 주면 코드를 작성
