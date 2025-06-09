@@ -1,5 +1,5 @@
 #test.txt파일을 읽어와서
-#outTest.py에 
+#outTest.py에 붙여넣기기
 inFile = open("test.txt","r", encoding="UTF-8")
 outFile = open("outTest.txt","w", encoding="UTF-8")
 
@@ -11,7 +11,7 @@ while True:
         chNum = chNum + 100
         chChange = chr(chNum)
         inStrChange += chChange
-    if(inFile == ''):
+    if(inStr == ''):
         break
     outFile.writelines(inStr)
 
